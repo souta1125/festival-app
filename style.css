@@ -1,0 +1,124 @@
+html{
+    /* コピー禁止！！ */
+    -webkit-user-select: none;
+    user-select: none;
+    /* ズーム禁止 */
+    touch-action: pan-x pan-y;
+    overflow: hidden;
+}
+  
+body{
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  position: relative;
+}
+
+.page_wrap{
+  background-color: #fff;
+  color: var(--txt);
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+
+  .page_content{
+    background-color: #fff;
+    box-shadow: 0 0 3px #333;
+    font-size: 1.0em;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--mw);
+    min-height: 100dvh;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.skeleton{
+  display: none;
+}
+
+main{
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* list */
+.list{
+  margin: 0 auto;
+  width: 100%;
+
+  .list_item{
+    border-top: 1px solid var(--color_gray);
+    display: flex;
+    padding: 1.2em 0;
+
+    .imgBox{
+      width: 25%;
+    }
+    .txtBox{
+      margin-left: auto;
+      width: 70%;
+
+      p{
+        margin: 0.4em 0;
+
+        span{
+          font-weight: bold;
+        }
+      }
+      .name{
+        font-size: 1.6em;
+      }
+      .tags{
+        color: var(--color_yellow);
+
+        span{
+          margin-right: 2.0em;
+        }
+      }
+      .waitingTime{
+        font-size: 1.3em;
+      }
+    }
+  }
+}
+
+/* loading */
+.loading_wrap{
+  background-color: #fff;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+
+  .loading_inner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    &::before{
+      aspect-ratio: 1;
+      background-image: url('./img/loading.gif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      display: block;
+      max-width: calc(var(--mw) * 0.25);
+      width: 25dvw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
