@@ -25,11 +25,11 @@
         <div class="loading_wrap" id="js-loading">
           <div class="loading_inner"></div>
         </div>
-        <main>
+        <article>
           <div class="app-list">
             <ul class="list" id="js-list">
               <div class="skeleton" id="js-list_skeleton">
-                <li class="list_item" data-info='[]'>
+                <li class="list_item">
                   <div class="imgBox">
                     <img src="" alt="">
                   </div>
@@ -38,13 +38,47 @@
                     <p class="tags"></p>
                     <p class="waitingTime"></p>
                   </div>
+                  <div class="skeleton">
+                    <p class="sponsor"></p>
+                    <p class="description"></p>
+                    <p class="operation"></p>
+                    <p class="operationTime"></p>
+                  </div>
                 </li>
               </div>
             </ul>
           </div>
-          <div class="app-list_detail">
+          <div class="app-list_detail wrapper" id="js-list_detail">
             <div class="inner">
-
+              <div class="skeleton" id="js-list_detail_skeleton">
+                <header>
+                  <div class="imgBox">
+                    <img src="https://media1.tokyodisneyresort.jp/images/adventure/attraction/1005_thum_name.jpg?mod=20240701105307" alt="">
+                  </div>
+                  <div class="txtBox">
+                    <div>
+                      <p class="sponsor"></p>
+                    </div>
+                    <div>
+                      <p class="name"></p>
+                    </div>
+                  </div>
+                </header>
+                <main>
+                  <section class="container infoBox">
+                    <div class="realTimeInfo">
+                      <p class="waitingTime"></p>
+                      <p class="operationTime"></p>
+                      <p class="operation"></p>
+                    </div>
+                  </section>
+                  <section class="container description">
+                    <p class="description_txt"></p>
+                  </section>
+                </main>
+              </div>
+              <div id="js-detail_wrapper"></div>
+              <a aria-disabled="false" class="btnType1 closeBtn">閉じる</a>
             </div>
           </div>
         </main>
