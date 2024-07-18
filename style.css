@@ -49,14 +49,38 @@ body{
 
 main{
   margin: 0 auto;
-  padding-bottom: 40px; 
+  position: relative;
   width: 90%;
+}
+
+article{
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* btn */
+.btnType1{
+  background-color: var(--color_gray);
+  border-radius: 5px;
+  color: #fff;
+  cursor: not-allowed;
+  display: block;
+  padding: 8px 40px;
+  text-align: center;
+  width: 100%;
+
+  &[aria-disabled="false"]{
+    background-color: var(--btn);
+    cursor: pointer;
+  }
 }
 
 /* list */
 .list{
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
 
   .list_item{
     border-top: 1px solid var(--color_gray);
@@ -88,7 +112,97 @@ main{
         }
       }
       .waitingTime{
-        font-size: 1.3em;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+/* app-list_detail */
+.app-list_detail{
+  display: none;
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .inner{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--mw);
+    overflow-y: scroll;
+
+    .btnType1{
+      margin: 20px auto 0;
+      width: 90%;
+    }
+    
+    header{
+      .txtBox{
+        margin: 20px auto;
+        width: 90%;
+
+        > div{
+          margin: 12px 0;
+
+          p{
+            margin: 4px 0;
+          }
+        }
+        .name{
+          font-size: 1.6em;
+          font-weight: bold;
+        }
+      }
+    }
+    main{
+      margin: 20px auto 0;
+      width: 90%;
+
+      .container{
+        margin: 20px auto;
+        width: 100%;
+
+        &.infoBox{
+          background-color: var(--bg_blue);
+          padding: 20px 40px;
+          text-align: center;
+
+          > div{
+            margin: 20px auto;
+            width: 100%;
+
+            p{
+              margin: 8px 0;
+
+              span{
+                font-weight: bold;
+              }
+            }
+
+            &:first-child{
+              margin-top: 0;
+            }
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+          
+          .waitingTime{
+            font-size: 1.6em;
+          }
+          .operationTime{
+            font-size: 1.4em;
+          }
+          .operation{
+            font-size: 1.2em;
+          }
+        }
       }
     }
   }
