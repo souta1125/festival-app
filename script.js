@@ -74,9 +74,9 @@ $('.list_item').click(function(){
   html.find('img').attr('src', img);
   html.find('.name').text(name);
   if(sponsor){
-    html.find('.sponsor').text(sponsor);
+    html.find('.sponsor').text('提供：' + sponsor);
   }
-  if(waitingTime){
+  if($.isNumeric(waitingTime)){
     html.find('.waitingTime').html('<span>'+ waitingTime +'</span>分待ち');
   }
   html.find('.description').text(description);
